@@ -23,11 +23,11 @@ class MainActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT < 30) {
             val decorView: View = window.decorView
             val uiOptions: Int = View.SYSTEM_UI_FLAG_FULLSCREEN
-            decorView.setSystemUiVisibility(uiOptions)
+            decorView.systemUiVisibility = uiOptions
         } else {
             window.decorView.windowInsetsController?.hide(
                 android.view.WindowInsets.Type.systemBars()
-            );
+            )
         }
 
         setContentView(R.layout.activity_main)
